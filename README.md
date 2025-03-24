@@ -15,17 +15,52 @@
 
 ---
 
-## **🎯 Project Highlights**
+## 🎯 Project Highlights
 
-**Example:**
+### ✅ Best Model (Final Submission)
+- Fine-tuned a Vision Transformer (ViT) using **transfer learning**, **class balancing**, and **skin tone-aware augmentation**
+- Trained on a dataset of **~8000 images** combining internal Kaggle data with external sources
+- Achieved **0.688 F1 score** on the final Kaggle leaderboard
+- Ranked **7th overall** and **1st in the UCAL cohort**
 
-* Built a \[insert model type\] using \[techniques used\] to solve \[Kaggle competition task\]
-* Achieved an F1 score of \[insert score\] and a ranking of \[insert ranking out of participating teams\] on the final Kaggle Leaderboard
-* Used \[explainability tool\] to interpret model decisions
-* Implemented \[data preprocessing method\] to optimize results within compute constraints
+---
+
+### 📊 Datasets & Preprocessing
+
+#### 🗂️ Internal Dataset (Kaggle)
+- Original dataset with 6816 medical images across 21 skin condition classes  
+- Applied image resizing, normalization, and augmentation via `Albumentations`
+
+#### 🌐 External Dataset (Augmented)
+- Combined HAM10000 + SD-198 with **standardized labels**  
+- Merged using a custom mapping script, balanced to **500 samples per class**
+- Augmentation included flips, rotation, elastic transforms, and light cropping
+
+---
+
+### 🧪 Model Experiments
+
+#### 🧠 ViT Experiments
+- Base ViT model trained on original Kaggle dataset  
+- Best performance with learning rate `1e-5`, dropout `0.1`, and `7 epochs`
+
+##### 🔁 ViT with External Dataset
+- Trained with same hyperparameters on our **augmented dataset**
+- Showed improved validation performance, but **worse Kaggle generalization**
+
+#### 🧬 MedViT (Medical Vision Transformer)
+- Tested MedViT with `MedViT_MedicalNet-22k` pretrained weights  
+- Used full fine-tuning with dropout and cosine learning rate schedule  
+- Model was very heavy and prone to **overfitting / memory issues**, yielding **low F1 (~0.33)**
+
+---
+
+### 🧰 Techniques & Tools
+- Preprocessing: `Albumentations`, `OpenCV`, `PIL`, and `Pandas`
+- Modeling: `PyTorch`, `HuggingFace Transformers`, `MedViT`
+- Evaluation: `F1 Score (macro)`, accuracy, and Kaggle leaderboard ranking
 
 🔗 [Equitable AI for Dermatology | Kaggle Competition Page](https://www.kaggle.com/competitions/bttai-ajl-2025/overview)
-🔗 [WiDS Datathon 2025 | Kaggle Competition Page](https://www.kaggle.com/competitions/widsdatathon2025/overview)
 
 ---
 
