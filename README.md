@@ -91,7 +91,7 @@ The Kaggle competition was an integral component of the Break Through Tech AI Pr
 
 **Objective of the Challenge**
 
-The primary objective of this challenge was to develop an AI-driven model capable of accurately classifying skin lesions across diverse skin tones. This entailed creating a robust dataset representative of various skin types and training models to ensure equitable diagnostic performance, regardless of a patient's skin color.
+The primary objective of this challenge was to develop an AI-driven model capable of accurately classifying different skin conditions across diverse skin tones. This entailed creating a robust dataset representative of various skin types and training models to ensure equitable diagnostic performance, regardless of a patient's skin color.
 
 **Real-World Significance and Potential Impact**
 
