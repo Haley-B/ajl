@@ -104,6 +104,8 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 
 ## 🗃️ Dataset Overview
 
+### Columns
+
 Our dataset consisted of **2,860 rows** and **8 columns**, described in the table below:
 
 | Column | Name                  | Description                                                                                          |
@@ -116,6 +118,13 @@ Our dataset consisted of **2,860 rows** and **8 columns**, described in the tabl
 | 6      | `three_partition_label`| Value indicating one of three diagnostic categories                                                |
 | 7      | `qc`                  | Quality control check by a **Board-certified dermatologist** (only available for limited images)    |
 | 8      | `ddi_scale`           | Used to reconcile this dataset with another — **not relevant for our use case**                    |
+
+### Labels/Target
+
+
+### Fitzpatrick Values
+
+
 
 
 
