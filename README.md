@@ -1,4 +1,4 @@
-# GitHub Kaggle Project README Template
+#  Algorithmic Justice League (AJL): Equitable AI for Dermatology
 
 ⚠️ _Remember to update the above title and remove all guidance notes and examples in this template, before finalizing your README_
 
@@ -8,9 +8,10 @@
 
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
-| Alice Doe | @AliceDoe | Built CNN model, performed data augmentation |
-| Mel Ramakrishnan | @MelRam | Led EDA, visualized dataset distributions, handled missing data |
-| Charlie Nguyen | @CharlieN | Implemented explainability tools |
+| Haley Boswell | @Haley-B | -------|
+| Jose Gonzalez | @josegonz115 | ---------|
+| Harini Pootheri| @ |-------- |
+| Hannah Sissoko| @ | ----------|
 
 ---
 
