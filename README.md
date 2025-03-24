@@ -18,29 +18,32 @@
 ## 🎯 Project Highlights
 
 ### ✅ **Best Model (Final Submission)**
+
 - Fine-tuned a **Vision Transformer** model (**ViT-Large-Patch16-224**, pretrained on **ImageNet-21k**) using **transfer learning**, **targeted class balancing**, and **skin tone-aware augmentation**.
 - Trained on a dataset of **4,270 images**, with **3,416 used for training** and **854 for validation**.
 - This dataset included **untouched** and **minimally augmented** images from the original **Kaggle source data**.
   - Augmentations applied: **horizontal flip**, **vertical flip**, and **rotation** between **-45° to +45°**.
+- Balanced skin tone representation using both **Fitzpatrick Centaur (FC)** and **Fitzpatrick Scale (FS)** labels:
+  - Created skin tone subsets where **FC = FS**, then **augmented all groups** to match the largest (442 images).
+  - Remaining images (where **FC ≠ FS**) were included to preserve data diversity.
 - Conducted a **hyperparameter grid search** to optimize performance.
   - Final settings: **learning rate = 2e-5**, **weight decay = 0.01**.
 - Trained for **5 epochs** to allow learning while minimizing **overfitting**.
 - Used **AdamW** optimizer and **cross-entropy loss** from **PyTorch**.
-- Achieved a final **F1 score of 0.66826** on the **Kaggle Private Leaderboard**.
+- Achieved a final **macro F1 score of 0.66826** on the **Kaggle Private Leaderboard**.
 - Ranked **7th overall** and secured **1st place in the UCLA cohort**.
----
+
 
 ### 📊 Datasets & Preprocessing
 
 #### 🗂️ Internal Dataset (Kaggle)
-- Original dataset with 6816 medical images across 21 skin condition classes  
-- Applied image resizing, normalization, and augmentation via `Albumentations`
+- Subset of the FitzPatrick17k dataset with 2860 medical images across 21 skin condition classes. 
+- Applied image resizing, normalization, and augmentation via `Albumentations`.
 
 #### 🌐 External Dataset (Augmented)
-- Combined HAM10000 + SD-198 with **standardized labels**  
-- Merged using a custom mapping script, balanced to **500 samples per class**
-- Augmentation included flips, rotation, elastic transforms, and light cropping
-
+- Combined HAM10000 + SD-198 + PAD-UFES-20 + ASCID with **standardized labels**.  
+- Merged using a custom mapping script, balanced to **500 samples per class**.
+- Augmentation included flips, rotation, elastic transforms, and light cropping.
 ---
 
 ### 🧪 Model Experiments
@@ -81,14 +84,33 @@
 
 ---
 
-## **🏗️ Project Overview**
+### **🏗️ Project Overview
+**The Kaggle Competition and Its Connection to the Break Through Tech AI Program**
+The Kaggle competition was an integral component of the Break Through Tech AI Program, designed to bridge the gender gap in artificial intelligence by providing women and underrepresented groups with real-world AI challenges. Participants were tasked with developing machine learning models to address specific problems, fostering practical experience and innovation.
 
-**Describe:**
+**Objective of the Challenge**
+The primary objective of this challenge was to develop an AI-driven model capable of accurately classifying skin lesions across diverse skin tones. This entailed creating a robust dataset representative of various skin types and training models to ensure equitable diagnostic performance, regardless of a patient's skin color.
 
-* The Kaggle competition and its connection to the Break Through Tech AI Program
-* The objective of the challenge
-* The real-world significance of the problem and the potential impact of your work
+**Real-World Significance and Potential Impact**
+The underrepresentation of darker skin tones in medical imagery has profound implications on healthcare outcomes. A 2020 study revealed that only 18% of images in dermatology textbooks depicted dark skin tones, underscoring a significant gap in medical education. This lack of representation can lead to misdiagnoses or delayed diagnoses for patients with darker skin, further exacerbating health disparities.
 
+Other studies have found similarly concerning statistics:
+
+- A 2018 study reported that only 4.5% of images in medical textbooks featured darker skin tones.
+
+- A review of 15 nursing textbooks found that only 12.3% of photo images and 2.4% of drawn graphics represented dark skin tones.
+
+- Another study analyzing 1,123 dermatology teaching images showed that just 14.9% featured skin of color (SoC), while 84.3% featured lighter tones.
+
+- Skin conditions like eczema and alopecia, which are prevalent in SoC populations, were among the least represented.
+
+These disparities can have life-altering consequences. For example, research shows that melanoma—among the most deadly skin cancers—is diagnosed later and more aggressively in patients with darker skin due to lack of diagnostic familiarity. In one documented case, a biracial patient went undiagnosed with T-cell lymphoma for five years, being repeatedly misdiagnosed due to lack of awareness of how the condition appears on darker skin.
+
+In parallel, generative AI and diagnostic models trained disproportionately on light-skinned imagery may fail to recognize conditions in people with SoC, compounding existing inequalities in healthcare access and outcomes.
+
+By incorporating skin tone-aware augmentation, balanced class sampling, and diverse datasets, our project directly addresses these shortcomings. Our model development process prioritized fairness and inclusivity, creating AI that does not just perform well but performs equitably.
+
+Efforts like this are a step toward closing the diagnostic gap, enhancing medical education, and building AI systems that work for everyone—regardless of skin tone. As AI continues to expand its footprint in clinical tools, representation is not just ethical—it’s **lifesaving**.
 ---
 
 ## **📊 Data Exploration**
