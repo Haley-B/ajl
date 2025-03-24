@@ -102,17 +102,21 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 
 # **📊 Data Exploration**
 
-- Our dataset consisted of 2860 rows and 8 columns, shown in the table below:
-|     Column     |       Name       |   Description    |
-|----------------|------------------|------------------|
-| 1    | md5hash| Image Identifier ID/File Name |
-| 2    | fitzpatrick_scale | Integer Values -1,1,2,3,4,5,6 describing self-identified Fitzpatrick skin type|
-| 3    | fitzpatrick_centaur | Integer Values -1,1,2,3,4,5,6 describing self-identified Fitzpatrick skin type assigned by Centaur Labs|
-| 4    | label | The medical diagnosis |
-| 5    | nine_partition_label | Value indicating one of nine diagnostic categories|
-| 6    | three_partition_label | Value indicating one of three diagnostic categories|
-| 7    | qc | Quality control check by a Board-certified dermatologist (only avaliable for a very limited amount of the data)|
-| 8    | ddi_scale | Column used to reconcile this dataset with another dataset-not relevant for our use case|
+## 🗃️ Dataset Overview
+
+Our dataset consisted of **2,860 rows** and **8 columns**, described in the table below:
+
+| Column | Name                  | Description                                                                                          |
+|--------|-----------------------|------------------------------------------------------------------------------------------------------|
+| 1      | `md5hash`             | Image Identifier ID / File Name                                                                      |
+| 2      | `fitzpatrick_scale`   | Integer values -1, 1–6 describing **self-identified Fitzpatrick skin type**                         |
+| 3      | `fitzpatrick_centaur`| Integer values -1, 1–6 describing **Centaur Labs-assigned Fitzpatrick skin type**                   |
+| 4      | `label`               | The medical diagnosis label (e.g., eczema, melanoma, etc.)                                          |
+| 5      | `nine_partition_label`| Value indicating one of nine diagnostic categories                                                  |
+| 6      | `three_partition_label`| Value indicating one of three diagnostic categories                                                |
+| 7      | `qc`                  | Quality control check by a **Board-certified dermatologist** (only available for limited images)    |
+| 8      | `ddi_scale`           | Used to reconcile this dataset with another — **not relevant for our use case**                    |
+
 
 
 * The dataset(s) used (i.e., the data provided in Kaggle \+ any additional sources)
