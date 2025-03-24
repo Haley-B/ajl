@@ -15,7 +15,7 @@
 
 ---
 
-### **🏗️ Project Overview**
+# **🏗️ Project Overview**
 **The Kaggle Competition and Its Connection to the Break Through Tech AI Program**
 
 The Kaggle competition was an integral component of the Break Through Tech AI Program, designed to bridge the gender gap in artificial intelligence by providing women and underrepresented groups with real-world AI challenges. Participants were tasked with developing machine learning models to address specific problems, fostering practical experience and innovation.
@@ -43,9 +43,9 @@ By incorporating skin tone-aware augmentation, balanced class sampling, and dive
 Efforts like this are a step toward closing the diagnostic gap, enhancing medical education, and building AI systems that work for everyone—regardless of skin tone. As AI continues to expand its footprint in clinical tools, representation is not just ethical—it’s **lifesaving**.
 ---
 
-### 🎯 Project Highlights
+# **🎯 Project Highlights**
 
-## ✅ **Best Model (Final Submission)**
+### ✅ **Best Model (Final Submission)**
 
 - Fine-tuned a **Vision Transformer** model (**ViT-Large-Patch16-224**, pretrained on **ImageNet-21k**) using **transfer learning**, **targeted class balancing**, and **skin tone-aware augmentation**.
 - Trained on a dataset of **4,270 images**, with **3,416 used for training** and **854 for validation**.
@@ -62,36 +62,36 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 - Ranked **7th overall** and secured **1st place in the UCLA cohort**.
 
 
-## 📊 Datasets & Preprocessing
+### 📊 Datasets & Preprocessing
 
-#🗂️ Internal Dataset (Kaggle)
+#### 🗂️ Internal Dataset (Kaggle)
 - Subset of the FitzPatrick17k dataset with 2860 medical images across 21 skin condition classes. 
 - Applied image resizing, normalization, and augmentation via `Albumentations`.
 
-#🌐 External Dataset (Augmented)
+#### 🌐 External Dataset (Augmented)
 - Combined HAM10000 + SD-198 + PAD-UFES-20 + ASCID with **standardized labels**.  
 - Merged using a custom mapping script, balanced to **500 samples per class**.
 - Augmentation included flips, rotation, elastic transforms, and light cropping.
 ---
 
-## 🧪 Model Experiments
+### 🧪 Model Experiments
 
-# 🧠 ViT Experiments
+#### 🧠 ViT Experiments
 - Base ViT model trained on original Kaggle dataset  
 - Best performance with learning rate `1e-5`, dropout `0.1`, and `7 epochs`
 
-# 🔁 ViT with External Dataset
+#### 🔁 ViT with External Dataset
 - Trained with same hyperparameters on our **augmented dataset**
 - Showed improved validation performance, but **worse Kaggle generalization**
 
-# 🧬 MedViT (Medical Vision Transformer)
+#### 🧬 MedViT (Medical Vision Transformer)
 - Tested MedViT with `MedViT_MedicalNet-22k` pretrained weights  
 - Used full fine-tuning with dropout and cosine learning rate schedule  
 - Model was very heavy and prone to **overfitting / memory issues**, yielding **low F1 (~0.33)*
   
 ---
 
-## 🧰 Techniques & Tools
+### 🧰 Techniques & Tools
 - Preprocessing: `Albumentations`, `OpenCV`, `PIL`, and `Pandas`
 - Modeling: `PyTorch`, `HuggingFace Transformers`, `MedViT`
 - Evaluation: `F1 Score (macro)`, accuracy, and Kaggle leaderboard ranking
@@ -100,21 +100,7 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 
 ---
 
-## **👩🏽‍💻 Setup & Execution**
-
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
-
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
-
----
-
-
-
-## **📊 Data Exploration**
+# **📊 Data Exploration**
 
 **Describe:**
 
@@ -128,7 +114,19 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 
 ---
 
-## **🧠 Model Development**
+# **👩🏽‍💻 Setup & Execution**
+
+**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
+
+* How to clone the repository
+* How to install dependencies
+* How to set up the environment
+* How to access the dataset(s)
+* How to run the notebook or scripts
+
+---
+
+# **🧠 Model Development**
 
 **Describe (as applicable):**
 
@@ -138,7 +136,7 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 
 ---
 
-## **📈 Results & Key Findings**
+# **📈 Results & Key Findings**
 
 **Describe (as applicable):**
 
