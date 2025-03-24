@@ -102,22 +102,22 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 
 # **📊 Data Exploration**
 
-## 🗃️ Dataset Overview
+## 🗃️ Source Data Overview
 
 ### Columns
 
 Our dataset consisted of **2,860 rows** and **8 columns**, described in the table below:
 
-| Column | Name                  | Description                                                                                          |
-|--------|-----------------------|------------------------------------------------------------------------------------------------------|
-| 1      | `md5hash`             | Image Identifier ID / File Name                                                                      |
-| 2      | `fitzpatrick_scale`   | Integer values -1, 1–6 describing **self-identified Fitzpatrick skin type**                         |
-| 3      | `fitzpatrick_centaur`| Integer values -1, 1–6 describing **Centaur Labs-assigned Fitzpatrick skin type**                   |
-| 4      | `label`               | The medical diagnosis label (e.g., eczema, melanoma, etc.)                                          |
-| 5      | `nine_partition_label`| Value indicating one of nine diagnostic categories                                                  |
-| 6      | `three_partition_label`| Value indicating one of three diagnostic categories                                                |
-| 7      | `qc`                  | Quality control check by a **Board-certified dermatologist** (only available for limited images)    |
-| 8      | `ddi_scale`           | Used to reconcile this dataset with another — **not relevant for our use case**                    |
+| Column | Name                  | Description                                                                                          | Used? |
+|--------|-----------------------|------------------------------------------------------------------------------------------------------|-------|
+| 1      | `md5hash`             | Image Identifier ID / File Name                                                                      | Yes |
+| 2      | `fitzpatrick_scale`   | Integer values -1, 1–6 describing **self-identified Fitzpatrick skin type**                         | Yes |
+| 3      | `fitzpatrick_centaur`| Integer values -1, 1–6 describing **Centaur Labs-assigned Fitzpatrick skin type**                   | Yes |
+| 4      | `label`               | The medical diagnosis label (e.g., eczema, melanoma, etc.)                                          | Yes |
+| 5      | `nine_partition_label`| Value indicating one of nine diagnostic categories                                                  | No |
+| 6      | `three_partition_label`| Value indicating one of three diagnostic categories                                                | No |
+| 7      | `qc`                  | Quality control check by a **Board-certified dermatologist** (only available for limited images)    | No |
+| 8      | `ddi_scale`           | Used to reconcile this dataset with another — **not relevant for our use case**                    | No |
 
 ### Labels/Target
 
