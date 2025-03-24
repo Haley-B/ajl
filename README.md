@@ -121,9 +121,13 @@ Our dataset consisted of **2,860 rows** and **8 columns**, described in the tabl
 
 ### Labels/Target
 
+As mentioned, our labels are meant to classify various skin conditions. Shown below are the various coniditions and their distribution among the dataset:
+![Skin Condition Distribution](images/skin_dist.png)
 
 ### Fitzpatrick Values
 
+The key challenge in this project was handling the imabalance among skin tones, which was quite severe for darker skin tones (those with values >= 4 for FC/FS). We see this imbalance below:
+![Fitzpatrick Skin Type Distribution](images/fitz_skintype_dist.png)
 
 
 
