@@ -17,12 +17,17 @@
 
 ## 🎯 Project Highlights
 
-### ✅ Best Model (Final Submission)
-- Fine-tuned a Vision Transformer (ViT) using **transfer learning**, **class balancing**, and **skin tone-aware augmentation**
-- Trained on a dataset of **~8000 images** combining internal Kaggle data with external sources
-- Achieved **0.688 F1 score** on the final Kaggle leaderboard
-- Ranked **7th overall** and **1st in the UCAL cohort**
-
+### ✅ **Best Model (Final Submission)**
+- Fine-tuned a **Vision Transformer** model (**ViT-Large-Patch16-224**, pretrained on **ImageNet-21k**) using **transfer learning**, **targeted class balancing**, and **skin tone-aware augmentation**.
+- Trained on a dataset of **4,270 images**, with **3,416 used for training** and **854 for validation**.
+- This dataset included **untouched** and **minimally augmented** images from the original **Kaggle source data**.
+  - Augmentations applied: **horizontal flip**, **vertical flip**, and **rotation** between **-45° to +45°**.
+- Conducted a **hyperparameter grid search** to optimize performance.
+  - Final settings: **learning rate = 2e-5**, **weight decay = 0.01**.
+- Trained for **5 epochs** to allow learning while minimizing **overfitting**.
+- Used **AdamW** optimizer and **cross-entropy loss** from **PyTorch**.
+- Achieved a final **F1 score of 0.66826** on the **Kaggle Private Leaderboard**.
+- Ranked **7th overall** and secured **1st place in the UCLA cohort**.
 ---
 
 ### 📊 Datasets & Preprocessing
