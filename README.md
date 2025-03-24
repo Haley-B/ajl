@@ -61,37 +61,7 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 - Achieved a final **macro F1 score of 0.66826** on the **Kaggle Private Leaderboard**.
 - Ranked **7th overall** and secured **1st place in the UCLA cohort**.
 
-
-### 📊 Datasets & Preprocessing
-
-#### 🗂️ Internal Dataset (Kaggle)
-- Subset of the FitzPatrick17k dataset with 2860 medical images across 21 skin condition classes. 
-- Applied image resizing, normalization, and augmentation via `Albumentations`.
-
-#### 🌐 External Dataset (Augmented)
-- Combined HAM10000 + SD-198 + PAD-UFES-20 + ASCID with **standardized labels**.  
-- Merged using a custom mapping script, balanced to **500 samples per class**.
-- Augmentation included flips, rotation, elastic transforms, and light cropping.
----
-
-### 🧪 Model Experiments
-
-#### 🧠 ViT Experiments
-- Base ViT model trained on original Kaggle dataset  
-- Best performance with learning rate `1e-5`, dropout `0.1`, and `7 epochs`
-
-#### 🔁 ViT with External Dataset
-- Trained with same hyperparameters on our **augmented dataset**
-- Showed improved validation performance, but **worse Kaggle generalization**
-
-#### 🧬 MedViT (Medical Vision Transformer)
-- Tested MedViT with `MedViT_MedicalNet-22k` pretrained weights  
-- Used full fine-tuning with dropout and cosine learning rate schedule  
-- Model was very heavy and prone to **overfitting / memory issues**, yielding **low F1 (~0.33)*
-  
----
-
-### 🧰 Techniques & Tools
+#### 🧰 Techniques & Tools
 - Preprocessing: `Albumentations`, `OpenCV`, `PIL`, and `Pandas`
 - Modeling: `PyTorch`, `HuggingFace Transformers`, `MedViT`
 - Evaluation: `F1 Score (macro)`, accuracy, and Kaggle leaderboard ranking
@@ -101,6 +71,15 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 ---
 
 # **📊 Data Exploration**
+
+#### 🗂️ Internal Dataset (Kaggle)
+- Subset of the FitzPatrick17k dataset with 2860 medical images across 21 skin condition classes. 
+- Applied image resizing, normalization, and augmentation via `Albumentations`.
+
+#### 🌐 External Dataset (Augmented)
+- Combined HAM10000 + SD-198 + PAD-UFES-20 + ASCID with **standardized labels**.  
+- Merged using a custom mapping script, balanced to **500 samples per class**.
+- Augmentation included flips, rotation, elastic transforms, and light cropping.
 
 ## 🗃️ Source Data Overview
 
@@ -136,9 +115,39 @@ The key challenge in this project was handling the imabalance among skin tones, 
 * Data exploration and preprocessing approaches
 * Challenges and assumptions when working with the dataset(s)
 
-**Potential visualizations to include:**
 
-* Plots, charts, heatmaps, feature visualizations, sample dataset images
+
+## Data Augmentation and Expansion Via External Datasets
+
+We ultimately created 5 unique datasets using various methods, including augmentation and sourcing external data.
+
+### Augmentations Applied:
+
+- Horizontal Flips, Vertical Flips, Rotations (-45 to +45 degrees), Elastic Transforms, Grid Distortions, Affine Transformations (for image shifts only), Mild Cropping, Transpose, Mild Perspective Shifts
+
+### External Datasets Used:
+
+| Name | Description                  | Relevancy                                                                                       | Images Gained |
+|--------|-----------------------|------------------------------------------------------------------------------------------------------|-------|
+| HAM10000     | `md5hash`             | Image Identifier ID / File Name                                                                      | Yes |
+| SD-198     | `fitzpatrick_scale`   | Integer values -1, 1–6 describing **self-identified Fitzpatrick skin type**                         | Yes |
+| PAD-UFES-20     | `fitzpatrick_centaur`| Integer values -1, 1–6 describing **Centaur Labs-assigned Fitzpatrick skin type**                   | Yes |
+| ASCID    | `label`               | The medical diagnosis label (e.g., eczema, melanoma, etc.)                                          | Yes |
+ 
+
+#### Dataset 1: 
+  - Size
+  - Extneral Images Used?
+  - Augmentations Applied
+  - 
+
+#### Dataset 2:
+
+#### Dataset 3:
+
+#### Dataset 4:
+
+#### Dataset 5:
 
 ---
 
@@ -155,6 +164,23 @@ The key challenge in this project was handling the imabalance among skin tones, 
 ---
 
 # **🧠 Model Development**
+
+### 🧪 Model Experiments
+
+#### 🧠 ViT Experiments
+- Base ViT model trained on original Kaggle dataset  
+- Best performance with learning rate `1e-5`, dropout `0.1`, and `7 epochs`
+
+#### 🔁 ViT with External Dataset
+- Trained with same hyperparameters on our **augmented dataset**
+- Showed improved validation performance, but **worse Kaggle generalization**
+
+#### 🧬 MedViT (Medical Vision Transformer)
+- Tested MedViT with `MedViT_MedicalNet-22k` pretrained weights  
+- Used full fine-tuning with dropout and cosine learning rate schedule  
+- Model was very heavy and prone to **overfitting / memory issues**, yielding **low F1 (~0.33)*
+  
+---
 
 **Describe (as applicable):**
 
