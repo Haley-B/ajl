@@ -154,13 +154,83 @@ We ultimately created 5 unique datasets using various methods, including augment
 
 # **👩🏽‍💻 Setup & Execution**
 
-**Provide step-by-step instructions so someone else can run your code and reproduce your results. Depending on your setup, include:**
+This section provides instructions to set up the environment, download the necessary data, and run the code to reproduce the results of our best-performing model (ViT-Large fine-tuned on the Kaggle dataset).
 
-* How to clone the repository
-* How to install dependencies
-* How to set up the environment
-* How to access the dataset(s)
-* How to run the notebook or scripts
+### **Prerequisites**
+
+Before you begin, ensure you have the following installed:
+
+1.  **Git:** For cloning the repository.
+2.  **Python:** Version 3.8 or higher is recommended.
+3.  **pip:** Python's package installer (usually comes with Python).
+4.  **Kaggle Account & API Key:** You need a Kaggle account to download the competition dataset. You also need to configure your Kaggle API key locally.
+    *   **To get your API key:**
+        1.  Log in to your Kaggle account.
+        2.  Click on your profile picture and select "Account" from the drop-down menu.
+        3.  Scroll down to the "API" section.
+        4.  Click "Create New API Token". This will download a `kaggle.json` file containing your username and API key.
+    *   **To configure the key:**
+        *   **Linux/macOS:** Create a directory `~/.kaggle/` (if it doesn't exist) and move the downloaded `kaggle.json` file into it (`mv /path/to/downloaded/kaggle.json ~/.kaggle/kaggle.json`). Ensure the file has appropriate permissions (`chmod 600 ~/.kaggle/kaggle.json`).
+        *   **Windows:** Create a folder named `.kaggle` inside your user profile directory (e.g., `C:\Users\<Your-Username>\.kaggle\`) and move the downloaded `kaggle.json` file into it.
+
+### **Step-by-Step Instructions**
+
+1.  **Clone the Repository:**
+    Open your terminal or command prompt and run:
+    ```bash
+    git clone https://github.com/Haley-B/ajl.git
+    cd ajl
+    ```
+
+2.  **Set Up a Virtual Environment:**
+    It's highly recommended to use a virtual environment to manage project dependencies and avoid conflicts with other Python projects.
+    ```bash
+    # Create the virtual environment (named .venv)
+    python3 -m venv .venv
+
+    # Activate the virtual environment
+    # On Linux/macOS:
+    source .venv/bin/activate
+    # On Windows (Command Prompt):
+    # .\.venv\Scripts\activate.bat
+    # On Windows (PowerShell):
+    # .\.venv\Scripts\Activate.ps1
+    ```
+    You should see `(.venv)` appear at the beginning of your terminal prompt, indicating the environment is active.
+
+3.  **Install Dependencies:**
+    Install all the required Python packages listed in the `requirements.txt` file.
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+4.  **Download Data:**
+    *   **Competition Data:** Run the provided shell script to download the official Kaggle competition dataset using the Kaggle API key you configured earlier.
+        ```bash
+        # Optional: Ensure the script has execute permissions
+        # chmod +x ./download_kaggle_data.sh
+
+        # Run the script
+        ./download_kaggle_data.sh
+        ```
+        *Note: This script should download the data (images and CSV files) into a designated directory within the project structure (e.g., a `data/` folder). Verify the script's output or contents if needed.*
+    *   **Augmented Data:** To run experiments involving our pre-augmented datasets, you also need to run the notebook `[Notebook Name To Be Added].ipynb`. This notebook contains code to download these augmented images into the `data/augmented/` directory. *(Note: This step is not required to reproduce the final Kaggle submission result, which used only the original Kaggle data with minimal augmentation applied during training.)*
+
+5.  **Run the Main Experiment Notebook:**
+    The notebook `AJL_model_testing2_BestPerformance.ipynb` contains the code for our final, best-performing model. This includes data loading (using the data downloaded in Step 4 - Competition Data), applying minimal augmentations (flips, rotation), fine-tuning the ViT-Large model, evaluating performance, and potentially generating the submission file.
+    *   Open the notebook using a tool like Jupyter Lab, Jupyter Notebook, or VS Code with Python extensions.
+    *   Ensure your virtual environment (`.venv`) is selected as the kernel for the notebook.
+    *   Run the cells sequentially from top to bottom.
+
+### **Expected Outcome**
+
+After successfully running the main experiment notebook (`AJL_model_testing2_BestPerformance.ipynb`), you should have:
+
+*   Trained model weights saved (usually as `.pt` or `.pth` files).
+*   Validation metrics printed (e.g., F1 score, accuracy).
+*   Optionally, a `submission.csv` file generated, ready for upload to the Kaggle competition (if the competition is still active).
+
+*Note: This repository may contain other notebooks exploring different datasets (including the augmented ones downloaded in Step 4) or models (like ResNet50, MedViT). The steps above focus specifically on reproducing the final submission result.*
 
 ---
 

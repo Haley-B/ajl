@@ -1,0 +1,21 @@
+# Jupyter Notebook
+ipykernel
+ipywidgets
+
+# Core ML/DL Libraries
+torch
+torchvision
+transformers
+
+# Data Handling
+pandas
+numpy
+
+# Image Processing
+Pillow
+
+# Metrics
+scikit-learn
+
+# Data
+kaggle
