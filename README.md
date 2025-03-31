@@ -245,6 +245,7 @@ After successfully running the main experiment notebook (`AJL_model_testing2_Bes
 * Performance metrics:
   - Our best model scored 7th in the competition, with an F1 score of 0.66826.
 * How your model performed across different skin tones:
+  - Because we augmented so many more images from minority skin tone classes, these minority classes seemed to perform better upon validating model performance. This is because the training set essentially contains many copies of the images seen in our validation set for these skin classes, with the only difference being that the images are flipped or rotated. 
   - ![Skin Tone Validation Accuracy](images/FS_acc.png)
 * Insights from evaluating model fairness:
   - From our results, we believe that the development of a fair and accurate medical classification model is possible, but only with the right steps to address feature imbalances. Developers must seek diverse datasets that include images across all skin-tones and utilize balancing mechanisms to further bridge that gap. 
