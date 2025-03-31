@@ -225,9 +225,11 @@ After successfully running the main experiment notebook (`AJL_model_testing2_Bes
 
 ### 🧪 Model Experiments
 
-#### 🧠 ViT Experiments
-- Base ViT model trained on augmented Kaggle dataset  
-- Best performance with learning rate `1e-5`, dropout `0.1`, and `7 epochs`
+#### 🧠 ViT Experiments (Winning Architecture)
+- Base and Large ViT model trained on augmented Kaggle dataset
+- Base ViT trained on a smaller dataset containing only augmented images (no external data). 
+- Testing Best Performance Hyperparameters: version `ViT Base` learning rate `1e-5`, dropout `0.1`, and `7 epochs`
+- Kaggle Best Performance Hyperparameters: version `ViT Base`  learning rate `1e-5`, dropout `0.1`, and `5 epochs`
 
 #### 🔁 ViT with External Dataset
 - Trained with same hyperparameters on our **augmented dataset**
