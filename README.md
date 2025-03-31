@@ -226,7 +226,7 @@ After successfully running the main experiment notebook (`AJL_model_testing2_Bes
 ### 🧪 Model Experiments
 
 #### 🧠 ViT Experiments
-- Base ViT model trained on original Kaggle dataset  
+- Base ViT model trained on augmented Kaggle dataset  
 - Best performance with learning rate `1e-5`, dropout `0.1`, and `7 epochs`
 
 #### 🔁 ViT with External Dataset
@@ -238,28 +238,15 @@ After successfully running the main experiment notebook (`AJL_model_testing2_Bes
 - Used full fine-tuning with dropout and cosine learning rate schedule  
 - Model was very heavy and prone to **overfitting / memory issues**, yielding **low F1 (~0.33)*
   
----
-
-**Describe (as applicable):**
-
-* Model(s) used (e.g., CNN with transfer learning, regression models)
-* Feature selection and Hyperparameter tuning strategies
-* Training setup (e.g., % of data for training/validation, evaluation metric, baseline performance)
-
----
 
 # **📈 Results & Key Findings**
 
-**Describe (as applicable):**
 
 * Performance metrics (e.g., Kaggle Leaderboard score, F1-score)
 * How your model performed overall
 * How your model performed across different skin tones (AJL)
 * Insights from evaluating model fairness (AJL)
 
-**Potential visualizations to include:**
-
-* Confusion matrix, precision-recall curve, feature importance plot, prediction distribution, outputs from fairness or explainability tools
 
 ---
 
