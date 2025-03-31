@@ -300,9 +300,7 @@ Check out [this guide](https://drive.google.com/file/d/1kYKaVNR\_l7Abx2kebs3AdDi
 
 **Address the following:**
 
-* What are some of the limitations of your model?
-* What would you do differently with more time/resources?
-* What additional datasets or techniques would you explore?
+Our model is highly limited by our quality of data. This is because ViT models are very data-dependent and less impacted by hyperparameter tuning. Our best model used only lightly augmented images in the expanded dataset (rotations and flips) and used no external datasets outside of the Fitzpatrick 17k. However, it's important to note the images in the Fitzpatrick 17k dataset are already limited. While using only augmented images resulted in best model performance here, in practice, we believe real-time model performance would improve if external data is introduced. Additionally, due to the size of the datasets and training time, we were very limited on the number of models we could test with external data or a large number of augmented images. There is also a very large external medical image set called ISIC (https://www.isic-archive.com/) we would like to have used, but simply did not have the resources to download alongside all else. Ensembled methods are something we would also like to have experimented with, as we only had time to focus on individual models rather than combinations. We believe the latter would significantly improve performance as we had base-ViT, large-ViT and ResNet50 models all performing relatively well. 
 
 ---
 
