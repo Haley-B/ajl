@@ -108,7 +108,8 @@ As mentioned, our labels are meant to classify various skin conditions. Shown be
 The key challenge in this project was handling the imabalance among skin tones, which was quite severe for darker skin tones (those with values >= 4 for FC/FS). We see this imbalance below:
 ![Fitzpatrick Skin Type Distribution](images/fitz_skintype_dist.png)
 
-
+The Heatmap shows discrepencies based on the color scale from 1 to -1. 
+![image](https://github.com/user-attachments/assets/e9227aae-a956-4a1f-8976-e623e5b10215)
 
 
 * The dataset(s) used (i.e., the data provided in Kaggle \+ any additional sources)
