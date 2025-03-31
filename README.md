@@ -27,6 +27,7 @@ The primary objective of this challenge was to develop an AI-driven model capabl
 **Real-World Significance and Potential Impact**
 
 Our project addresses the significant underrepresentation of darker skin tones in medical imagery, which leads to misdiagnoses and delayed diagnoses, by incorporating skin tone-aware augmentation, balanced class sampling, and diverse datasets to ensure our AI model performs equitably and inclusively, reducing health disparities in diagnostic outcomes.
+
 ---
 
 # **🎯 Project Highlights**
