@@ -242,11 +242,11 @@ After successfully running the main experiment notebook (`AJL_model_testing2_Bes
 # **📈 Results & Key Findings**
 
 
-* Performance metrics
+* Performance metrics:*
   Our best model scored 7th in the competition, with an F1 score of 0.66826.
-* How your model performed across different skin tones (AJL)
+* How your model performed across different skin tones:*
   NEED TO ADD IMAGEEE TO IMAGE FOLDER AND ADD HERE !!!!!!!!!!!!!!!!!!!!!!!!!!!
-* Insights from evaluating model fairness (AJL)
+* Insights from evaluating model fairness:*
   From our results, we believe that the development of a fair and accurate medical classification model is possible, but only with the right steps to address feature imbalances. Developers must seek diverse datasets that include images across all skin-tones and utilize balancing mechanisms to further bridge that gap. 
 
 
