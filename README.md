@@ -308,62 +308,23 @@ Check out [this guide](https://drive.google.com/file/d/1kYKaVNR\_l7Abx2kebs3AdDi
 
 ## **📄 References & Additional Resources**
 
-@article{dosovitskiy2020image, title={An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale}, author={Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and Uszkoreit, Jakob and Houlsby, Neil}, journal={arXiv preprint arXiv:2010.11929}, year={2020} }
+Dosovitskiy, A., Beyer, L., Kolesnikov, A., Weissenborn, D., Zhai, X., Unterthiner, T., ... & Houlsby, N. (2020). An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale. arXiv. https://arxiv.org/abs/2010.11929
 
-@article{omalley2024ensuring,
-  title={Ensuring Appropriate Representation in Artificial Intelligence–Generated Medical Imagery: Protocol for a Methodological Approach to Address Skin Tone Bias},
-  author={O'Malley, Andrew and Veenhuizen, Miriam and Ahmed, Ayla},
-  journal={JMIR AI},
-  year={2024},
-  publisher={JMIR Publications},
-  doi={10.2196/58275}
-}
+O'Malley, A., Veenhuizen, M., & Ahmed, A. (2024). Ensuring Appropriate Representation in Artificial Intelligence–Generated Medical Imagery: Protocol for a Methodological Approach to Address Skin Tone Bias. JMIR AI. https://doi.org/10.2196/58275
 
-@article{perlman2021skin,
-  title={Skin of color lacks representation in medical student resources: A cross-sectional study},
-  author={Perlman, Katherine L and Williams, Natalie M and Egbeto, Ista A and Gao, David X and Siddiquee, Naomi and Park, Joyce H},
-  journal={International Journal of Women's Dermatology},
-  pages={195--196},
-  year={2021},
-  publisher={Elsevier},
-  doi={10.1016/j.ijwd.2020.12.018}
-}
+Perlman, K. L., Williams, N. M., Egbeto, I. A., Gao, D. X., Siddiquee, N., & Park, J. H. (2021). Skin of color lacks representation in medical student resources: A cross-sectional study. International Journal of Women's Dermatology, 7(2), 195–196. https://doi.org/10.1016/j.ijwd.2020.12.018
 
-@article{kaundinya2021diversity,
-  title={Diversity of Skin Images in Medical Texts: Recommendations for Student Advocacy in Medical Education},
-  author={Kaundinya, Trisha and Kundu, Roopal V},
-  journal={Journal of Medical Education and Curricular Development},,
-  year={2021},
-  publisher={SAGE Publications},
-  doi={10.1177/23821205211025855}
-}
+Kaundinya, T., & Kundu, R. V. (2021). Diversity of Skin Images in Medical Texts: Recommendations for Student Advocacy in Medical Education. Journal of Medical Education and Curricular Development. https://doi.org/10.1177/23821205211025855
 
-@article{mckay2023representation,
-  title={Representation of dark skin tones in foundational nursing textbooks},
-  author={McKay, K. and others},
-  journal={Nurse Education Today},
-  year={2023},
-  publisher={Elsevier},
-  doi={10.1016/j.nedt.2023.105719}
-}
+McKay, K., et al. (2023). Representation of dark skin tones in foundational nursing textbooks. Nurse Education Today, 124, 105719. https://doi.org/10.1016/j.nedt.2023.105719
 
-@misc{ibe2024diversity,
-  title={On the Need for Diversity in Medical Illustrations},
-  author={Ibe, Chidiebere},
-  year={2024},
-  publisher={The Commonwealth Fund},
-  note={Podcast episode},
-  url={https://www.commonwealthfund.org/publications/podcast/2024/apr/need-diversity-medical-illustrations}
-}
+Ibe, C. (2024). On the Need for Diversity in Medical Illustrations [Podcast]. The Commonwealth Fund. https://www.commonwealthfund.org/publications/podcast/2024/apr/need-diversity-medical-illustrations
 
-@article{statnews2023diversity,
-  title={Meet the medical illustrator challenging the lack of diversity in medicine},
-  author={STAT News},
-  year={2023},
-  publisher={STAT News},
-  url={https://www.statnews.com/2023/08/22/diversity-medical-illustrations-chidiebere-ibe/}
-}
+STAT News. (2023). Meet the medical illustrator challenging the lack of diversity in medicine. https://www.statnews.com/2023/08/22/diversity-medical-illustrations-chidiebere-ibe/
 
+Myers, A. (2023). AI Shows Dermatology Educational Materials Often Lack Darker Skin Tones. Stanford HAI. https://hai.stanford.edu/news/ai-shows-dermatology-educational-materials-often-lack-darker-skin-tones
+
+Figure 1 Editorial Team. (2023, July 3). Diverse Skin Tones in Medical Images and the Importance of Representation. Figure 1. https://www.figure1.com/resources/blog/diverse-skin-tones-in-medical-images-and-the-importance-of-representation/
 
 
 ---
