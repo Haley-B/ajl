@@ -18,11 +18,11 @@
 # **🏗️ Project Overview**
 **The Kaggle Competition and Its Connection to the Break Through Tech AI Program**
 
-The Kaggle competition was an integral component of the Break Through Tech AI Program, designed to bridge the gender gap in artificial intelligence by providing women and underrepresented groups with real-world AI challenges. Participants were tasked with developing machine learning models to address specific problems, fostering practical experience and innovation.
+The Kaggle competition was an integral component of the Break Through Tech AI Program, designed to bridge the gender gap in artificial intelligence by providing women and underrepresented groups with real-world AI challenges. We were tasked with a developing machine learning model capable of diangnosing various medical conditions, fostering practical experience and impactful innovation.
 
 **Objective of the Challenge**
 
-The primary objective of this challenge was to develop an AI-driven model capable of accurately classifying different skin conditions across diverse skin tones. This entailed creating a robust dataset representative of various skin types and training models to ensure equitable diagnostic performance, regardless of a patient's skin color.
+The primary objective of this challenge was to develop an AI-driven model capable of accurately classifying 21 different skin conditions across diverse skin tones. This entailed creating a robust dataset representative of various skin types and training models to ensure equitable diagnostic performance, regardless of a patient's skin color.
 
 **Real-World Significance and Potential Impact**
 
