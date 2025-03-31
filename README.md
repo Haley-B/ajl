@@ -308,6 +308,62 @@ Check out [this guide](https://drive.google.com/file/d/1kYKaVNR\_l7Abx2kebs3AdDi
 
 ## **📄 References & Additional Resources**
 
-* Cite any relevant papers, articles, or tools used in your project
+@article{dosovitskiy2020image, title={An Image is Worth 16x16 Words: Transformers for Image Recognition at Scale}, author={Dosovitskiy, Alexey and Beyer, Lucas and Kolesnikov, Alexander and Weissenborn, Dirk and Zhai, Xiaohua and Unterthiner, Thomas and Dehghani, Mostafa and Minderer, Matthias and Heigold, Georg and Gelly, Sylvain and Uszkoreit, Jakob and Houlsby, Neil}, journal={arXiv preprint arXiv:2010.11929}, year={2020} }
+
+@article{omalley2024ensuring,
+  title={Ensuring Appropriate Representation in Artificial Intelligence–Generated Medical Imagery: Protocol for a Methodological Approach to Address Skin Tone Bias},
+  author={O'Malley, Andrew and Veenhuizen, Miriam and Ahmed, Ayla},
+  journal={JMIR AI},
+  year={2024},
+  publisher={JMIR Publications},
+  doi={10.2196/58275}
+}
+
+@article{perlman2021skin,
+  title={Skin of color lacks representation in medical student resources: A cross-sectional study},
+  author={Perlman, Katherine L and Williams, Natalie M and Egbeto, Ista A and Gao, David X and Siddiquee, Naomi and Park, Joyce H},
+  journal={International Journal of Women's Dermatology},
+  pages={195--196},
+  year={2021},
+  publisher={Elsevier},
+  doi={10.1016/j.ijwd.2020.12.018}
+}
+
+@article{kaundinya2021diversity,
+  title={Diversity of Skin Images in Medical Texts: Recommendations for Student Advocacy in Medical Education},
+  author={Kaundinya, Trisha and Kundu, Roopal V},
+  journal={Journal of Medical Education and Curricular Development},,
+  year={2021},
+  publisher={SAGE Publications},
+  doi={10.1177/23821205211025855}
+}
+
+@article{mckay2023representation,
+  title={Representation of dark skin tones in foundational nursing textbooks},
+  author={McKay, K. and others},
+  journal={Nurse Education Today},
+  year={2023},
+  publisher={Elsevier},
+  doi={10.1016/j.nedt.2023.105719}
+}
+
+@misc{ibe2024diversity,
+  title={On the Need for Diversity in Medical Illustrations},
+  author={Ibe, Chidiebere},
+  year={2024},
+  publisher={The Commonwealth Fund},
+  note={Podcast episode},
+  url={https://www.commonwealthfund.org/publications/podcast/2024/apr/need-diversity-medical-illustrations}
+}
+
+@article{statnews2023diversity,
+  title={Meet the medical illustrator challenging the lack of diversity in medicine},
+  author={STAT News},
+  year={2023},
+  publisher={STAT News},
+  url={https://www.statnews.com/2023/08/22/diversity-medical-illustrations-chidiebere-ibe/}
+}
+
+
 
 ---
