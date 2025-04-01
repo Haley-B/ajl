@@ -8,9 +8,9 @@
 
 | Name | GitHub Handle | Contribution |
 | ----- | ----- | ----- |
-| Haley Boswell | @Haley-B | Led end-to-end development including exploratory data analysis (EDA), dataset curation (5 custom sets), label standardization, augmentation experiments, and submission strategy. Trained and evaluated ViT-Base, ViT-Large, ViT-Large (ImageNet-21k), MedViT-Base, and MedViT-Large (MedicalNet-22k) models. Maintained all notebooks and code infrastructure. |
-| Jose Gonzalez | @josegonz115 | Contributed to EDA and created insightful visualizations. Trained and evaluated a ResNet50 model as part of model comparison. |
-| Harini Pootheri| @hpootheri | Provided consistent team support through active participation and collaboration. Helped foster a positive and communicative team dynamic. |
+| Haley Boswell | @Haley-B | Led end-to-end development including exploratory data analysis (EDA), dataset curation (5 custom sets), label standardization, augmentation experiments, and submission strategy. Trained and evaluated ViT-Base, ViT-Large, ViT-Large (ImageNet-21k), MedViT-Base, and MedViT-Large (MedicalNet-22k) models. Maintained all notebooks and code infrastructure. Contributed to GitHub/README.md project development and analysis. |
+| Jose Gonzalez | @josegonz115 | Contributed to EDA and created insightful visualizations. Trained and evaluated a ResNet50 model as part of model comparison. Contributed to GitHub/README.md project development and analysis.|
+| Harini Pootheri| @hpootheri | Provided consistent team support through active participation and collaboration. Helped foster a positive and communicative team dynamic. Contributed to GitHub/README.md project analysis.|
 | Hannah Sissoko| @ | No contribution after initial team formation. |
 
 ---
