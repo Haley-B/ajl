@@ -113,7 +113,7 @@ We ultimately created 3 unique datasets using various methods, including augment
 | ASCID    | `label`               | The medical diagnosis label (e.g., eczema, melanoma, etc.)                                          | Yes |
  
 
-#### Dataset 1: 
+#### Dataset 1: Medium Performance
   - Size: 6816 images
   - Extneral Images Used?: No
   - Augmentations Applied:
@@ -129,23 +129,38 @@ We ultimately created 3 unique datasets using various methods, including augment
     - For images with (FC and FS >= 3) & where (FC != FS): had 393 images, augmented to get 750 total
     - Then merged with these with the remaining unaugmented images to create the full dataset
 
-#### Dataset 2:
+#### Dataset 2: Best Performing Set
 - Size: 4270 images
 - External Images Used?: No
 - Augmentations Applied:
   - HorizontalFlip(p=1.0)
   - Rotate(limit=45, p=1.0)
   - VerticalFlip(always_apply=True)
--Augmentation Method:
+- Augmentation Method:
   - For images with matching FC and FS values: augmented so there were 442 images in each category, where 442 is the number of images in the skin tone group with most images (FC/FS = 1)
   - Then merged with these with the remaining unaugmented images to create the full dataset
 
   
-#### Dataset 3:
-- Size:
+#### Dataset 3: Worst Performing Dataset
+- Size: 10491 images
 - External Images Used?: Yes
+    - Dataset: ASCID
+        - Labels Provided: Acne, Eczema, Keratosis
+    - Dataset: Ham10000
+        - Labels Provided: BCC, DF, MEL
+    - Dataset: PAD-UFES-20
+        - Labels Provided: BCC, SCC, ACK, SEK, MEL
+    - Dataset: SD198
+        - Labels Provided: Acne_Vulgaris, Basal_Cell_Carcinoma, Bowen's_Disease, Dermatofibroma , Eczema , Epidermal_Nevus , Keloid , Malignant_Melanoma , Pyogenic_Granuloma , Seborrheic_Keratosis
 - Augementations Applied:
+  - HorizontalFlip(p=0.5)
+  - VerticalFlip(p=0.3)
+  - Rotate(limit=20, p=0.5)
+  - RandomBrightnessContrast(p=0.3)
+  - ColorJitter(p=0.3)
+  - GaussianBlur(p=0.2)
 - Augmentation Method:
+    - Instead of balancing accross skin tones, we balanced it across all 21 labels
 
 
 ---
