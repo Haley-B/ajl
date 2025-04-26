@@ -95,15 +95,9 @@ The Heatmap shows discrepencies based on the color scale from 1 to -1.
 ![image](https://github.com/user-attachments/assets/e9227aae-a956-4a1f-8976-e623e5b10215)
 
 
-* The dataset(s) used (i.e., the data provided in Kaggle \+ any additional sources)
-* Data exploration and preprocessing approaches
-* Challenges and assumptions when working with the dataset(s)
-
-
-
 ## Data Augmentation and Expansion Via External Datasets
 
-We ultimately created 5 unique datasets using various methods, including augmentation and sourcing external data.
+We ultimately created 3 unique datasets using various methods, including augmentation and sourcing external data.
 
 ### Augmentations Applied:
 
@@ -120,18 +114,39 @@ We ultimately created 5 unique datasets using various methods, including augment
  
 
 #### Dataset 1: 
-  - Size
-  - Extneral Images Used?
-  - Augmentations Applied
-  - 
+  - Size: 6816 images
+  - Extneral Images Used?: No
+  - Augmentations Applied:
+    - HorizontalFlip(p=1.0),  
+    - Rotate(limit=(15,45), p=1.0)
+    - VerticalFlip(p=1.0)
+    - ElasticTransform(alpha=3, sigma=13, p=1.0)
+    - GridDistortion(num_steps=5, distort_limit=0.03, p=1.0)
+    - Affine(translate_percent=(0.02, 0.05), rotate=(0,0), scale=(1.0,1.0), p=1.0)
+    - RandomResizedCrop(size = (224, 224), scale=(0.70, 0.90), p=1.0) 
+- Augmentation Method:
+    - For images with matching FC and FS values: augmented so there were 750 images total in each category (7 total)
+    - For images with (FC and FS >= 3) & where (FC != FS): had 393 images, augmented to get 750 total
+    - Then merged with these with the remaining unaugmented images to create the full dataset
 
 #### Dataset 2:
+- Size: 4270 images
+- External Images Used?: No
+- Augmentations Applied:
+  - HorizontalFlip(p=1.0)
+  - Rotate(limit=45, p=1.0)
+  - VerticalFlip(always_apply=True)
+-Augmentation Method:
+  - For images with matching FC and FS values: augmented so there were 442 images in each category, where 442 is the number of images in the skin tone group with most images (FC/FS = 1)
+  - Then merged with these with the remaining unaugmented images to create the full dataset
 
+  
 #### Dataset 3:
+- Size:
+- External Images Used?: Yes
+- Augementations Applied:
+- Augmentation Method:
 
-#### Dataset 4:
-
-#### Dataset 5:
 
 ---
 
