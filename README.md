@@ -105,12 +105,12 @@ We ultimately created 3 unique datasets using various methods, including augment
 
 ### External Datasets Used:
 
-| Name | Description                  | Relevancy                                                                                       | Images Gained |
-|--------|-----------------------|------------------------------------------------------------------------------------------------------|-------|
-| HAM10000     | `md5hash`             | Image Identifier ID / File Name                                                                      | Yes |
-| SD-198     | `fitzpatrick_scale`   | Integer values -1, 1–6 describing **self-identified Fitzpatrick skin type**                         | Yes |
-| PAD-UFES-20     | `fitzpatrick_centaur`| Integer values -1, 1–6 describing **Centaur Labs-assigned Fitzpatrick skin type**                   | Yes |
-| ASCID    | `label`               | The medical diagnosis label (e.g., eczema, melanoma, etc.)                                          | Yes |
+| Name | Link |
+|--------|---|
+| HAM10000     |[ ](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000) |
+| SD-198    |[ ](https://paperswithcode.com/dataset/sd-198)
+| PAD-UFES-20     |[ ](https://www.kaggle.com/datasets/mahdavi1202/skin-cancer)|
+| ASCID    | [ ](https://www.kaggle.com/datasets/syedalinaqvi/augmented-skin-conditions-image-dataset/data)
  
 
 #### Dataset 1: Medium Performance
