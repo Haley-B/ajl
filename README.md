@@ -99,10 +99,6 @@ The Heatmap shows discrepencies based on the color scale from 1 to -1.
 
 We ultimately created 3 unique datasets using various methods, including augmentation and sourcing external data.
 
-### Augmentations Applied:
-
-- Horizontal Flips, Vertical Flips, Rotations (-45 to +45 degrees), Elastic Transforms, Grid Distortions, Affine Transformations (for image shifts only), Mild Cropping, Transpose, Mild Perspective Shifts
-
 ### External Datasets Used:
 
 | Name | Link |
@@ -113,7 +109,18 @@ We ultimately created 3 unique datasets using various methods, including augment
 | ASCID    | https://www.kaggle.com/datasets/syedalinaqvi/augmented-skin-conditions-image-dataset/data|
  
 
-#### Dataset 1: Medium Performance
+#### Dataset 1: Best Performing Set
+- Size: 4270 images
+- External Images Used?: No
+- Augmentations Applied:
+  - HorizontalFlip(p=1.0)
+  - Rotate(limit=45, p=1.0)
+  - VerticalFlip(always_apply=True)
+- Augmentation Method:
+  - For images with matching FC and FS values: augmented so there were 442 images in each category, where 442 is the number of images in the skin tone group with most images (FC/FS = 1)
+  - Then merged with these with the remaining unaugmented images to create the full dataset
+
+#### Dataset 2: Medium Performance
   - Size: 6816 images
   - Extneral Images Used?: No
   - Augmentations Applied:
@@ -128,18 +135,6 @@ We ultimately created 3 unique datasets using various methods, including augment
     - For images with matching FC and FS values: augmented so there were 750 images total in each category (7 total)
     - For images with (FC and FS >= 3) & where (FC != FS): had 393 images, augmented to get 750 total
     - Then merged with these with the remaining unaugmented images to create the full dataset
-
-#### Dataset 2: Best Performing Set
-- Size: 4270 images
-- External Images Used?: No
-- Augmentations Applied:
-  - HorizontalFlip(p=1.0)
-  - Rotate(limit=45, p=1.0)
-  - VerticalFlip(always_apply=True)
-- Augmentation Method:
-  - For images with matching FC and FS values: augmented so there were 442 images in each category, where 442 is the number of images in the skin tone group with most images (FC/FS = 1)
-  - Then merged with these with the remaining unaugmented images to create the full dataset
-
   
 #### Dataset 3: Worst Performing Dataset
 - Size: 10491 images
