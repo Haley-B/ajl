@@ -15,9 +15,6 @@
 ---
 
 # **🏗️ Project Overview**
-**The Kaggle Competition and Its Connection to the Break Through Tech AI Program**
-
-The Kaggle competition was an integral component of the Break Through Tech AI Program, designed to bridge the gender gap in artificial intelligence by providing women and underrepresented groups with real-world AI challenges. We were tasked with a developing machine learning model capable of diangnosing various medical conditions, fostering practical experience and impactful innovation.
 
 **Objective of the Challenge**
 
