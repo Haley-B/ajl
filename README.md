@@ -107,7 +107,7 @@ We ultimately created 3 unique datasets using various methods, including augment
 
 | Name | Link |
 |--------|------------------------------------|
-| HAM10000     |[ ](https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000) |
+| HAM10000     |https://www.kaggle.com/datasets/kmader/skin-cancer-mnist-ham10000|
 | SD-198    |[ ](https://paperswithcode.com/dataset/sd-198) |
 | PAD-UFES-20     |[ ](https://www.kaggle.com/datasets/mahdavi1202/skin-cancer)|
 | ASCID    | [ ](https://www.kaggle.com/datasets/syedalinaqvi/augmented-skin-conditions-image-dataset/data)|
