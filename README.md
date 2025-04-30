@@ -44,8 +44,6 @@ Efforts like this are a step toward closing the diagnostic gap, enhancing medica
 
 ---
 
----
-
 # **🎯 Project Highlights**
 
 ### ✅ **Best Model (Final Submission)**
