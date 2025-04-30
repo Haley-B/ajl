@@ -1,7 +1,5 @@
 #  Algorithmic Justice League (AJL): Equitable AI for Dermatology
 
-⚠️ _Remember to update the above title and remove all guidance notes and examples in this template, before finalizing your README_
-
 ---
 
 ### **👥 Team Members**
@@ -23,6 +21,28 @@ The primary objective of this challenge was to develop an AI-driven model capabl
 **Real-World Significance and Potential Impact**
 
 Our project addresses the significant underrepresentation of darker skin tones in medical imagery, which leads to misdiagnoses and delayed diagnoses, by incorporating skin tone-aware augmentation, balanced class sampling, and diverse datasets to ensure our AI model performs equitably and inclusively, reducing health disparities in diagnostic outcomes.
+
+---
+
+## **🖼️ Impact Narrative**
+
+The underrepresentation of darker skin tones in medical imagery has profound implications on healthcare outcomes. A 2020 study revealed that only 18% of images in dermatology textbooks depicted dark skin tones, underscoring a significant gap in medical education. This lack of representation can lead to misdiagnoses or delayed diagnoses for patients with darker skin, further exacerbating health disparities.
+
+Other studies have found similarly concerning statistics:
+  - A 2018 study reported that only 4.5% of images in medical textbooks featured darker skin tones.
+  - A review of 15 nursing textbooks found that only 12.3% of photo images and 2.4% of drawn graphics represented dark skin tones.
+  - Another study analyzing 1,123 dermatology teaching images showed that just 14.9% featured skin of color (SoC), while 84.3% featured lighter tones.
+  - Skin conditions like eczema and alopecia, which are prevalent in SoC populations, were among the least represented.
+
+These disparities can have life-altering consequences. For example, research shows that melanoma—among the most deadly skin cancers—is diagnosed later and more aggressively in patients with darker skin due to lack of diagnostic familiarity. In one documented case, a biracial patient went undiagnosed with T-cell lymphoma for five years, being repeatedly misdiagnosed due to lack of awareness of how the condition appears on darker skin.
+
+In parallel, generative AI and diagnostic models trained disproportionately on light-skinned imagery may fail to recognize conditions in people with SoC, compounding existing inequalities in healthcare access and outcomes.
+
+By incorporating skin tone-aware augmentation, balanced class sampling, and diverse datasets, our project directly addresses these shortcomings. Our model development process prioritized fairness and inclusivity, creating AI that does not just perform well but performs equitably.
+
+Efforts like this are a step toward closing the diagnostic gap, enhancing medical education, and building AI systems that work for everyone—regardless of skin tone. As AI continues to expand its footprint in clinical tools, representation is not just ethical—it’s **lifesaving**.
+
+---
 
 ---
 
@@ -90,9 +110,6 @@ As mentioned, our labels are meant to classify various skin conditions. Shown be
 
 The key challenge in this project was handling the imabalance among skin tones, which was quite severe for darker skin tones (those with values >= 4 for FC/FS). We see this imbalance below:
 ![Fitzpatrick Skin Type Distribution](images/fitz_skintype_dist.png)
-
-The Heatmap shows discrepencies based on the color scale from 1 to -1. 
-![image](https://github.com/user-attachments/assets/e9227aae-a956-4a1f-8976-e623e5b10215)
 
 
 ## Data Augmentation and Expansion Via External Datasets
@@ -259,7 +276,7 @@ After successfully running the main experiment notebook (`AJL_model_testing2_Bes
 #### 🧬 MedViT (Medical Vision Transformer)
 - Tested MedViT with `MedViT_MedicalNet-22k` pretrained weights  
 - Used full fine-tuning with dropout and cosine learning rate schedule  
-- Model was very heavy and prone to **overfitting / memory issues**, yielding **low F1 (~0.33)*
+- Model was very heavy and prone to **overfitting / memory issues**, yielding **low F1 (~0.33)**
   
 
 # **📈 Results & Key Findings**
@@ -267,32 +284,12 @@ After successfully running the main experiment notebook (`AJL_model_testing2_Bes
 
 * Performance metrics:
   - Our best model scored 7th in the competition, with an F1 score of 0.66826.
-* How your model performed across different skin tones:
+* How our model performed across different skin tones:
   - Because we augmented so many more images from minority skin tone classes, these minority classes seemed to perform better upon validating model performance. This is because the training set essentially contains many copies of the images seen in our validation set for these skin classes, with the only difference being that the images are flipped or rotated. (Note: We do not have the data to evaluate actual testing performance in this regard.) 
   - ![Skin Tone Validation Accuracy](images/FS_acc.png)
 * Insights from evaluating model fairness:
   - From our results, we believe that the development of a fair and accurate medical classification model is possible, but only with the right steps to address feature imbalances. Developers must seek diverse datasets that include images across all skin-tones and utilize balancing mechanisms to further bridge that gap. 
 
-
----
-
-## **🖼️ Impact Narrative**
-
-The underrepresentation of darker skin tones in medical imagery has profound implications on healthcare outcomes. A 2020 study revealed that only 18% of images in dermatology textbooks depicted dark skin tones, underscoring a significant gap in medical education. This lack of representation can lead to misdiagnoses or delayed diagnoses for patients with darker skin, further exacerbating health disparities.
-
-Other studies have found similarly concerning statistics:
-  - A 2018 study reported that only 4.5% of images in medical textbooks featured darker skin tones.
-  - A review of 15 nursing textbooks found that only 12.3% of photo images and 2.4% of drawn graphics represented dark skin tones.
-  - Another study analyzing 1,123 dermatology teaching images showed that just 14.9% featured skin of color (SoC), while 84.3% featured lighter tones.
-  - Skin conditions like eczema and alopecia, which are prevalent in SoC populations, were among the least represented.
-
-These disparities can have life-altering consequences. For example, research shows that melanoma—among the most deadly skin cancers—is diagnosed later and more aggressively in patients with darker skin due to lack of diagnostic familiarity. In one documented case, a biracial patient went undiagnosed with T-cell lymphoma for five years, being repeatedly misdiagnosed due to lack of awareness of how the condition appears on darker skin.
-
-In parallel, generative AI and diagnostic models trained disproportionately on light-skinned imagery may fail to recognize conditions in people with SoC, compounding existing inequalities in healthcare access and outcomes.
-
-By incorporating skin tone-aware augmentation, balanced class sampling, and diverse datasets, our project directly addresses these shortcomings. Our model development process prioritized fairness and inclusivity, creating AI that does not just perform well but performs equitably.
-
-Efforts like this are a step toward closing the diagnostic gap, enhancing medical education, and building AI systems that work for everyone—regardless of skin tone. As AI continues to expand its footprint in clinical tools, representation is not just ethical—it’s **lifesaving**.
 
 ---
 
